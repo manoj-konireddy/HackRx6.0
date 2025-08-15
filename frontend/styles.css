@@ -1,0 +1,260 @@
+/* Custom Styles for Intelligent Query Retrieval System */
+
+/* Navigation Tabs */
+.nav-tab {
+    @apply px-4 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200;
+}
+
+.nav-tab.active {
+    @apply text-blue-600 bg-blue-50 border-b-2 border-blue-600;
+}
+
+/* Buttons */
+.btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 flex items-center justify-center;
+}
+
+.btn-secondary {
+    @apply bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium py-2 px-4 rounded-md transition-colors duration-200 flex items-center;
+}
+
+.btn-danger {
+    @apply bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 flex items-center;
+}
+
+/* Sections */
+.section {
+    @apply hidden;
+}
+
+.section.active {
+    @apply block;
+}
+
+/* Upload Area */
+#uploadArea.dragover {
+    @apply border-blue-400 bg-blue-50;
+}
+
+/* Status Badges */
+.status-badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.status-completed {
+    @apply bg-green-100 text-green-800;
+}
+
+.status-processing {
+    @apply bg-yellow-100 text-yellow-800;
+}
+
+.status-failed {
+    @apply bg-red-100 text-red-800;
+}
+
+.status-pending {
+    @apply bg-gray-100 text-gray-800;
+}
+
+/* Domain Badges */
+.domain-badge {
+    @apply inline-flex items-center px-2 py-1 rounded text-xs font-medium;
+}
+
+.domain-general {
+    @apply bg-gray-100 text-gray-800;
+}
+
+.domain-insurance {
+    @apply bg-blue-100 text-blue-800;
+}
+
+.domain-legal {
+    @apply bg-purple-100 text-purple-800;
+}
+
+.domain-hr {
+    @apply bg-green-100 text-green-800;
+}
+
+.domain-compliance {
+    @apply bg-red-100 text-red-800;
+}
+
+/* Toast Notifications */
+.toast {
+    @apply bg-white border border-gray-200 rounded-lg shadow-lg p-4 mb-2 transform transition-all duration-300 ease-in-out;
+}
+
+.toast.success {
+    @apply border-green-200 bg-green-50;
+}
+
+.toast.error {
+    @apply border-red-200 bg-red-50;
+}
+
+.toast.warning {
+    @apply border-yellow-200 bg-yellow-50;
+}
+
+.toast.info {
+    @apply border-blue-200 bg-blue-50;
+}
+
+/* Query Results */
+.answer-content {
+    @apply prose prose-blue max-w-none;
+}
+
+.answer-content h1,
+.answer-content h2,
+.answer-content h3 {
+    @apply text-gray-900;
+}
+
+.answer-content p {
+    @apply text-gray-700 leading-relaxed;
+}
+
+.answer-content ul,
+.answer-content ol {
+    @apply text-gray-700;
+}
+
+.answer-content code {
+    @apply bg-gray-100 text-gray-800 px-1 py-0.5 rounded text-sm;
+}
+
+.answer-content pre {
+    @apply bg-gray-100 p-4 rounded-lg overflow-x-auto;
+}
+
+/* Source Documents */
+.source-doc {
+    @apply bg-gray-50 border border-gray-200 rounded-lg p-3 hover:bg-gray-100 transition-colors cursor-pointer;
+}
+
+.source-doc:hover {
+    @apply border-blue-300;
+}
+
+/* History Items */
+.history-item {
+    @apply bg-gray-50 border border-gray-200 rounded-lg p-4 hover:bg-gray-100 transition-colors cursor-pointer;
+}
+
+.history-item:hover {
+    @apply border-blue-300;
+}
+
+/* Loading States */
+.loading {
+    @apply opacity-50 pointer-events-none;
+}
+
+/* File Upload Styles */
+.file-item {
+    @apply bg-gray-50 border border-gray-200 rounded-lg p-3 flex items-center justify-between;
+}
+
+.file-item.uploading {
+    @apply border-blue-300 bg-blue-50;
+}
+
+.file-item.success {
+    @apply border-green-300 bg-green-50;
+}
+
+.file-item.error {
+    @apply border-red-300 bg-red-50;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-tab {
+        @apply text-xs px-2 py-1;
+    }
+    
+    .btn-primary,
+    .btn-secondary,
+    .btn-danger {
+        @apply text-sm px-3 py-2;
+    }
+    
+    .section {
+        @apply px-2;
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.slide-up {
+    animation: slideUp 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-gray-400 rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500;
+}
+
+/* Focus States */
+input:focus,
+textarea:focus,
+select:focus {
+    @apply outline-none ring-2 ring-blue-500 ring-opacity-50;
+}
+
+/* Table Styles */
+.table-row:hover {
+    @apply bg-gray-50;
+}
+
+/* Confidence Score */
+.confidence-high {
+    @apply text-green-600 font-semibold;
+}
+
+.confidence-medium {
+    @apply text-yellow-600 font-semibold;
+}
+
+.confidence-low {
+    @apply text-red-600 font-semibold;
+}
